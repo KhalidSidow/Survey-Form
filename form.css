@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+
+:root {
+  --primary-crayola: #FFD166;
+  --secondary-paradise-pink: #EF476F;
+  --main-text: #26547C;  
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--primary-crayola);
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--main-text);
+  margin: 0;
+  padding-bottom: 6em;
+  display: flex;
+  justify-content: center;
+}
+
+#title {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+#title,
+#desscription {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  margin: 1.5em;
+}
+
+#survey-form {
+  background-color: #0000ff19;
+  border-bottom: 1px solid var(--secondary-paradise-pink);
+  box-shadow: 0px 1px 1px 0px var(--secondary-paradise-pink);
+  display: block;
+  max-width: 100%;
+  transition: 250ms box-shadow ease-in-out, 250ms transform ease-in-out;
+  padding: 2.5rem;
+  
+}
+#survey-form:focus-within {
+  box-shadow: 1px 1px 1px 1px var(--secondary-paradise-pink);
+  transform: scale3d(1.022,1.022,1.022);
+}
+
+.header {
+  width: 100%;
+  font-size: 0.85em;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 2px;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+label {
+  cursor: pointer;
+  display: block;
+  transition: 225ms color ease-out;
+}
+
+label:focus-within {
+  color: var(--secondary-paradise-pink);
+}
+
+.form-control, .input-textarea {
+  border: none;
+  border-bottom: 3px solid var(--main-text);
+  border-radius: 5px;
+  display: block;
+  line-height: 2;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  margin-bottom: 1.5em;
+  padding: 0.85em 0.75em 0.75em 0.75em;
+  width: 100%;
+  transition: 250ms border-color ease-in-out;
+}
+.form-control:hover, .input-textarea:hover {
+  border-color: var(--secondary-paradise-pink);
+}
+.form-control:focus, .input-textarea:focus {
+  border-color: var(--secondary-paradise-pink);
+  outline: none;
+}
+.input-textarea {
+  line-height: 1.5;
+  margin-bottom: 0.5em;
+  min-height: 4em;
+  overflow: auto;
+  resize: vertical;
+  width: 100%;
+}
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+text-decoration: none;
+outline: none;
+  background-color: var(--secondary-paradise-pink);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 2px var(--primary-crayola);
+}
+
+.submit-button:hover {
+  color: var(--main-text);
+  background-color: var(--primary-crayola);
+  box-shadow: 0px 0px 0px 2px var(--secondary-paradise-pink);
+}
+.submit-button:active {
+  background-color: var(--secondary-paradise-pink);
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
